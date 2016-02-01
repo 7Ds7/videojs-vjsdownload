@@ -1,0 +1,15 @@
+{
+  "name": "videojs-vjsdownload",
+  "version": "0.0.0",
+  "author": "Brightcove, Inc.",
+  "license": "Apache-2.0",
+  "main": [
+    "dist/videojs-vjsdownload.css",
+    "dist/videojs-vjsdownload.min.js"
+  ],
+  "keywords": [
+    "videojs",
+    "videojs-plugin"
+  ]
+}
+
