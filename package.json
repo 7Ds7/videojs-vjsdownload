@@ -39,9 +39,15 @@
   },
   "keywords": [
     "videojs",
-    "videojs-plugin"
+    "videojs-plugin",
+    "videojs-vjsdownload",
+    "download"
   ],
-  "author": "Brightcove, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7Ds7/videojs-vjsdownload.git"
+  },
+  "author": "7Ds7",
   "license": "Apache-2.0",
   "browserify": {
     "transform": [
