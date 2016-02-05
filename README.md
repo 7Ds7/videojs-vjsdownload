@@ -1,6 +1,37 @@
 # videojs-vjsdownload
 
-downloads video
+Adds a button to download the video inside the player
+
+## Usage
+Include the plugin files
+
+* videojs-vjsdownload.js
+* videojs-vjsdownload.css
+
+```
+var player = videojs(document.querySelector('.video-js'), {
+  "playbackRates": [1, 2],
+  plugins: {
+    vjsdownload:{
+      beforeElement: 'playbackRateMenuButton'
+    }
+  }
+} , function() {
+  console.log('Callback video-js initiated');
+});
+```
+
+## Options
+ * beforeElement: name of the player.controlBar component for the button to be attached before
+  - default:  fullscreenMenuToggle
+
+
+## Style
+By default the download icon is the play button icon rotated 90deg, to include a custom icon please refer to videojs-vjsdownload.css file
+
+
+----------
+
 
 ### Table of Contents
 

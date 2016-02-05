@@ -1,1 +1,7 @@
+/**
+ * videojs-vjsdownload
+ * @version 0.0.0
+ * @copyright 2016 Brightcove, Inc.
+ * @license Apache-2.0
+ */
 .video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload{display:block;font-family:VideoJs}.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload:before{content:'\f101';transform:rotate(90deg)}

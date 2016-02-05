@@ -13,7 +13,9 @@ var _videoJs = (typeof window !== "undefined" ? window['videojs'] : typeof globa
 var _videoJs2 = _interopRequireDefault(_videoJs);
 
 // Default options for the plugin.
-var defaults = {};
+var defaults = {
+  beforeElement: 'fullscreenToggle'
+};
 
 /**
  * Function to invoke when the player is ready.
@@ -29,22 +31,20 @@ var defaults = {};
 var onPlayerReady = function onPlayerReady(player, options) {
   player.addClass('vjs-vjsdownload');
 
-  var download_button = player.controlBar.addChild('button', {
-    text: "WRD"
+  var DownloadButton = player.controlBar.addChild('button', {
+    // other options
   });
 
-  // other options
-  download_button.addClass("vjs-vjsdownload");
-  // this [8] here is quite silly
+  DownloadButton.addClass('vjs-vjsdownload');
+  player.controlBar.el().insertBefore(DownloadButton.el(), player.controlBar.getChild(options.beforeElement).el());
 
-  player.controlBar.el().insertBefore(download_button.el(), player.controlBar.getChild('playbackRateMenuButton').el());
-  //player.controlBar.insertBefore(player.controlBar.children().CustomControlSpacer, download_button)
-  download_button.on('click', downloadPress);
-};
+  var downloadPress = function downloadPress() {
+    var p = this.player();
 
-var downloadPress = function downloadPress() {
-  var p = this.player();
-  window.open(p.currentSrc(), 'Download');
+    window.open(p.currentSrc(), 'Download');
+  };
+
+  DownloadButton.on('click', downloadPress);
 };
 
 /**
