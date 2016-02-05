@@ -1,7 +1,1 @@
-/**
- * videojs-vjsdownload
- * @version 0.0.0
- * @copyright 2016 Brightcove, Inc.
- * @license Apache-2.0
- */
-.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload{display:block;font-family:VideoJs}.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload:before{content:'\f101';transform:rotate(90deg)}
+.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload{display:block;font-family:VideoJs}.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload:before{content:'\f101';transform:rotate(90deg);top:2px}.video-js.vjs-vjsdownload .vjs-button.vjs-vjsdownload:after{display:block;content:' ';width:4px;height:4px;background-color:white;position:relative;top:-3px;left:calc(50% - 2px)}

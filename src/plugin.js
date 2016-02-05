@@ -2,8 +2,38 @@ import videojs from 'video.js';
 
 // Default options for the plugin.
 const defaults = {
-  beforeElement: 'fullscreenToggle'
+  beforeElement: 'fullscreenToggle',
+  textControl: 'Download video',
+  name: 'downloadButton'
 };
+
+const vjsButton = videojs.getComponent('Button');
+
+class DownloadButton extends vjsButton {
+
+  /**
+  * Allow sub components to stack CSS class names
+  *
+  * @return {String} The constructed class name
+  * @method buildCSSClass
+  */
+  buildCSSClass() {
+    return `vjs-vjsdownload ${super.buildCSSClass()}`;
+  }
+
+  /**
+  * Handles click for full screen
+  *
+  * @method handleClick
+  */
+  handleClick() {
+    let p = this.player();
+
+    window.open(p.currentSrc(), 'Download');
+    p.trigger('downloadvideo');
+  }
+
+}
 
 /**
  * Function to invoke when the player is ready.
@@ -17,24 +47,14 @@ const defaults = {
  * @param    {Object} [options={}]
  */
 const onPlayerReady = (player, options) => {
-  player.addClass('vjs-vjsdownload');
+  let DButton = player.controlBar.addChild(new DownloadButton(player, options), {});
 
-  const DownloadButton = player.controlBar.addChild('button', {
-    // other options
-  });
+  DButton.controlText(options.textControl);
 
-  DownloadButton.addClass('vjs-vjsdownload');
-  player.controlBar.el().insertBefore(DownloadButton.el(),
+  player.controlBar.el().insertBefore(DButton.el(),
     player.controlBar.getChild(options.beforeElement).el());
 
-  let downloadPress = function() {
-    let p = this.player();
-
-    window.open(p.currentSrc(), 'Download');
-  };
-
-  DownloadButton.on('click', downloadPress);
-
+  player.addClass('vjs-vjsdownload');
 };
 
 /**

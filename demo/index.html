@@ -37,12 +37,16 @@
           "playbackRates": [1],
           plugins: {
             vjsdownload:{
-              beforeElement: 'playbackRateMenuButton' // default fullscreenMenuToggle
+              beforeElement: 'playbackRateMenuButton', // default fullscreenMenuToggle
+              textControl: 'Download video', // default "Download video"
+              name: 'downloadButton' // default "downloadButton"
             }
           }
-        } , function(e) {
-          console.log(e)
+        } , function() {
           console.log('Callback video-js initiated');
+          this.on('downloadvideo', function(){
+            console.log('downloadvideo triggered');
+          });
         });
     </script>
     </body>
