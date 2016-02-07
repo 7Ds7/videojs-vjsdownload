@@ -5,6 +5,7 @@
   // This class is added to the video.js element by the plugin by default.
   &.vjs-vjsdownload {
     .vjs-button.vjs-vjsdownload {
+      cursor: pointer;
       display: block;
       font-family: VideoJs;
       &:before {

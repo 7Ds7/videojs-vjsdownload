@@ -1,6 +1,6 @@
 /**
  * videojs-vjsdownload
- * @version 1.0.1
+ * @version 1.0.2
  * @copyright 2016 7Ds7
  * @license Apache-2.0
  */
