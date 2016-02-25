@@ -8,6 +8,9 @@ Include the plugin files
 * videojs-vjsdownload.js
 * videojs-vjsdownload.css
 
+also available trough ```bower install videojs-vjsdownload``` or ```npm install videojs-vjsdownload```
+
+
 ```
 var player = videojs(document.querySelector('.video-js'), {
   "playbackRates": [1, 2],
