@@ -13,7 +13,6 @@ also available trough ```bower install videojs-vjsdownload``` or ```npm install 
 
 ```
 var player = videojs(document.querySelector('.video-js'), {
-  "playbackRates": [1, 2],
   plugins: {
     vjsdownload:{
       beforeElement: 'playbackRateMenuButton',
