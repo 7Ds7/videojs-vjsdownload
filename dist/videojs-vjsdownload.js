@@ -30,7 +30,8 @@ var _videoJs2 = _interopRequireDefault(_videoJs);
 var defaults = {
   beforeElement: 'fullscreenToggle',
   textControl: 'Download video',
-  name: 'downloadButton'
+  name: 'downloadButton',
+  downloadURL: null
 };
 
 var vjsButton = _videoJs2['default'].getComponent('Button');
@@ -79,7 +80,7 @@ var DownloadButton = (function (_vjsButton) {
     value: function handleClick() {
       var p = this.player();
 
-      window.open(p.currentSrc(), 'Download');
+      window.open(this.options.downloadURL || p.currentSrc(), 'Download');
       p.trigger('downloadvideo');
     }
   }]);
