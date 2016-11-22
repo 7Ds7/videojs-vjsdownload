@@ -80,7 +80,7 @@ var DownloadButton = (function (_vjsButton) {
     value: function handleClick() {
       var p = this.player();
 
-      window.open(this.options.downloadURL || p.currentSrc(), 'Download');
+      window.open(this.options_.downloadURL || p.currentSrc(), 'Download');
       p.trigger('downloadvideo');
     }
   }]);
