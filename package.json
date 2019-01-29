@@ -1,6 +1,6 @@
 {
   "name": "videojs-vjsdownload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "downloads video",
   "main": "es5/plugin.js",
   "scripts": {
@@ -82,7 +82,7 @@
     "test/"
   ],
   "dependencies": {
-    "video.js": "^5.0.0"
+    "video.js": "^6.7.4"
   },
   "devDependencies": {
     "babel": "^5.8.0",

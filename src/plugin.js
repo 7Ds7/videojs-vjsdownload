@@ -77,6 +77,6 @@ const vjsdownload = function(options) {
 };
 
 // Register the plugin with video.js.
-videojs.plugin('vjsdownload', vjsdownload);
+videojs.registerPlugin('vjsdownload', vjsdownload);
 
 export default vjsdownload;
