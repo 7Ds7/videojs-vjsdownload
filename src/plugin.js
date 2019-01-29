@@ -4,7 +4,8 @@ import videojs from 'video.js';
 const defaults = {
   beforeElement: 'fullscreenToggle',
   textControl: 'Download video',
-  name: 'downloadButton'
+  name: 'downloadButton',
+  downloadURL: null
 };
 
 const vjsButton = videojs.getComponent('Button');
@@ -29,7 +30,7 @@ class DownloadButton extends vjsButton {
   handleClick() {
     let p = this.player();
 
-    window.open(p.currentSrc(), 'Download');
+    window.open(this.options_.downloadURL || p.currentSrc(), 'Download');
     p.trigger('downloadvideo');
   }
 
