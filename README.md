@@ -17,7 +17,8 @@ var player = videojs(document.querySelector('.video-js'), {
     vjsdownload:{
       beforeElement: 'playbackRateMenuButton',
       textControl: 'Download video',
-      name: 'downloadButton'
+      name: 'downloadButton',
+      downloadURL: null //optional if you need a different download url than the source
     }
   }
 } , function() {
