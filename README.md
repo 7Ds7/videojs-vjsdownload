@@ -2,6 +2,14 @@
 
 Adds a button to download the video inside the player
 
+## Demo
+https://7ds7.github.io/videojs-vjsdownload/
+
+or
+
+https://codepen.io/binaryunit/pen/BMpegv
+
+
 ## Usage
 Include the plugin files
 
