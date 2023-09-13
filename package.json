@@ -1,7 +1,7 @@
 {
   "name": "videojs-vjsdownload",
-  "version": "1.0.4",
-  "description": "downloads video",
+  "version": "1.0.5",
+  "description": "Adds one icon in the component bar to download video",
   "main": "es5/plugin.js",
   "scripts": {
     "prebuild": "npm run clean",
@@ -87,7 +87,7 @@
   "devDependencies": {
     "babel": "^5.8.0",
     "babelify": "^6.0.0",
-    "bannerize": "^1.0.0",
+    "bannerize": "^ 1.1.4",
     "browserify": "^11.0.0",
     "browserify-shim": "^3.0.0",
     "connect": "^3.4.0",
@@ -103,7 +103,7 @@
     "karma-safari-launcher": "^0.1.0",
     "lodash-compat": "^3.10.0",
     "minimist": "^1.2.0",
-    "node-sass": "^3.4.0",
+    "node-sass": "^8",
     "npm-run-all": "~1.2.0",
     "portscanner": "^1.0.0",
     "qunitjs": "^1.0.0",
