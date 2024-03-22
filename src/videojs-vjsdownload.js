@@ -1,7 +1,7 @@
 import "./videojs-vjsdownload.css";
 
 if (typeof videojs === "undefined") {
-  console.warn("vjstranscribe videojs not detected");
+  console.warn("vjsdownload videojs not detected");
 }
 
 const Plugin = videojs.getPlugin("plugin");
@@ -31,18 +31,17 @@ class VjsDownload extends Plugin {
         clickHandler: this.handleClick,
       });
 
-      player
-        .getChild("ControlBar")
-        .el()
-        .insertBefore(
-          button.el(),
-          player.controlBar.getChild(this.options.beforeElement).el()
-        );
+      player.getChild("ControlBar").el().insertBefore(
+        button.el(),
+        player.controlBar.getChild(this.options.beforeElement).el()
+      );
+
     });
   }
 
-  handleClick() {
-    window.open(this.options_.downloadURL || p.currentSrc(), "Download");
+  handleClick(e) {
+    let currentDownload = this.player().vjsdownload()?.options.downloadURL || this.player().currentSource().src;
+    window.open(currentDownload, "Download");
     this.player().trigger("downloadvideo");
   }
 }
