@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2.0.0
+  - Replace old generated build
+  - Update for videojs >= 8
 
 ## 1.0.2
   - Added pointer cursor to the button
