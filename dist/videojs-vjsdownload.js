@@ -1,7 +1,7 @@
 /*!
 * videojs-vjsdownload
 * @author 7Ds7
-* @version 2.0.0
+* @version 2.0.1
 * @url https://github.com/7Ds7/videojs-vjsdownload.git
 * Copyright 2024 Apache-2.0 licensed.
 */

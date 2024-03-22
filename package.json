@@ -1,6 +1,6 @@
 {
   "name": "videojs-vjsdownload",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Adds one icon in the component bar to download video",
   "main": "src/plugin.js",
   "scripts": {
