@@ -3,11 +3,11 @@
 Adds a button to download the video inside the player
 
 ## Demo
-https://7ds7.github.io/videojs-vjsdownload/
+https://7ds7.github.io/videojs-vjsdownload/demo
 
 or
 
-https://codepen.io/binaryunit/pen/BMpegv
+https://codepen.io/binaryunit/pen/xxedpwp
 
 
 ## Usage
@@ -16,7 +16,7 @@ Include the plugin files
 * videojs-vjsdownload.js
 * videojs-vjsdownload.css
 
-also available trough ```bower install videojs-vjsdownload``` or ```npm install videojs-vjsdownload```
+also available trough ```npm install videojs-vjsdownload```
 
 
 ```
@@ -44,4 +44,4 @@ var player = videojs(document.querySelector('.video-js'), {
  * downloadURL: oprional file to download (default: null)
 
 ## Style
-By default the download icon is the play button icon rotated 90deg with some suggar on top, to include a custom icon please refer to videojs-vjsdownload.css file
+By default the download icon is a clip path, to include a custom icon please refer to videojs-vjsdownload.css file
